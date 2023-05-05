@@ -62,6 +62,19 @@ class RoomWithView extends Room{
        this.view = view
        this.NumberOfBeds = NumberOfBeds
     }
+    
+    
+
+    printRoom(){
+        console.log(`
+        Room ${this.roomNum} on floor ${this.floorNum}:
+        Price: ${this.pricr}$
+        Booked: ${this.isBooked}
+        View: ${this.view}
+        Number of beds: ${this.NumberOfBeds}
+        `)
+    }
+   
 }
 
 /*-------------------------------------------------------*/
@@ -69,6 +82,15 @@ class SleepingRoom extends Room{
     constructor(floorNum,roomNum,pricr,isBooked,personCapacity){
         super(floorNum,roomNum,pricr,isBooked)
         this.personCapacity = personCapacity
+    }
+    
+    printRoom(){
+        console.log(`
+        Room ${this.roomNum} on floor ${this.floorNum}:
+        Price: ${this.pricr}$
+        Booked: ${this.isBooked}
+        Person capacity: ${this.personCapacity}
+        `)
     }
 }
 
